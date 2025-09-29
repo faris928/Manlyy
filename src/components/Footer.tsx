@@ -9,8 +9,18 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Crown className="h-8 w-8 text-yellow-400" />
-              <span className="text-3xl font-cursive font-bold">MANLY</span>
+              <div className="relative">
+                <Crown className="h-10 w-10 text-yellow-400 drop-shadow-lg filter crown-float" />
+                <div className="absolute inset-0 h-10 w-10 bg-yellow-400/20 rounded-full blur-md animate-pulse"></div>
+              </div>
+              <div className="relative">
+                <span className="text-4xl font-cursive font-bold animated-gradient logo-text-glow">
+                  MANLY
+                </span>
+                <div className="absolute inset-0 text-4xl font-cursive font-bold text-yellow-400/10 blur-sm">
+                  MANLY
+                </div>
+              </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Elevating the modern gentleman with premium essentials and timeless style.

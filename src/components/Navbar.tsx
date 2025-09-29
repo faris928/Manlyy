@@ -30,10 +30,18 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2 group">
-            <Crown className="h-8 w-8 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300" />
-            <span className="text-3xl font-cursive font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">
-              MANLY
-            </span>
+            <div className="relative">
+              <Crown className="h-10 w-10 text-yellow-400 group-hover:text-yellow-300 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 drop-shadow-lg filter crown-float" />
+              <div className="absolute inset-0 h-10 w-10 bg-yellow-400/20 rounded-full blur-md group-hover:bg-yellow-300/30 transition-all duration-500 animate-pulse"></div>
+            </div>
+            <div className="relative">
+              <span className="text-4xl font-cursive font-bold animated-gradient group-hover:scale-105 transition-transform duration-500 logo-text-glow">
+                MANLY
+              </span>
+              <div className="absolute inset-0 text-4xl font-cursive font-bold text-yellow-400/10 blur-sm group-hover:text-yellow-300/20 transition-all duration-500">
+                MANLY
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

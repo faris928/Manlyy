@@ -83,3 +83,47 @@
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
 }
+/* Enhanced Logo Effects */
+.logo-glow {
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
+}
+
+.logo-text-glow {
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+/* Animated gradient text */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Crown rotation animation */
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+}
+
+.crown-float {
+  animation: crownFloat 4s ease-in-out infinite;
+}
