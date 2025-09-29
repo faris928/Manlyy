@@ -1,5 +1,5 @@
 import React from 'react';
-import { Crown, Mail, Phone, MapPin } from 'lucide-react';
+import { Diamond, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -8,17 +8,27 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="relative">
-                <Crown className="h-10 w-10 text-yellow-400 drop-shadow-lg filter crown-float" />
-                <div className="absolute inset-0 h-10 w-10 bg-yellow-400/20 rounded-full blur-md animate-pulse"></div>
+            <div className="flex items-center space-x-3">
+              <div className="relative flex items-center">
+                {/* Decorative Lines */}
+                <div className="w-6 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent mr-2"></div>
+                
+                {/* Diamond Icon */}
+                <div className="relative">
+                  <Diamond className="h-8 w-8 text-yellow-400 drop-shadow-lg filter diamond-sparkle" />
+                  <div className="absolute inset-0 h-8 w-8 bg-yellow-400/20 rounded-full blur-md animate-pulse"></div>
+                </div>
+                
+                {/* Decorative Lines */}
+                <div className="w-6 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent ml-2"></div>
               </div>
+              
               <div className="relative">
-                <span className="text-4xl font-cursive font-bold animated-gradient logo-text-glow">
-                  MANLY
+                <span className="text-2xl font-serif font-bold text-white logo-text-glow tracking-wider">
+                  M<span className="text-yellow-400">A</span>NLY
                 </span>
-                <div className="absolute inset-0 text-4xl font-cursive font-bold text-yellow-400/10 blur-sm">
-                  MANLY
+                <div className="absolute inset-0 text-2xl font-serif font-bold text-yellow-400/10 blur-sm tracking-wider">
+                  M<span className="text-yellow-400/20">A</span>NLY
                 </div>
               </div>
             </div>

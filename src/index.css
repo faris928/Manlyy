@@ -127,3 +127,35 @@
 .crown-float {
   animation: crownFloat 4s ease-in-out infinite;
 }
+
+/* Diamond sparkle animation */
+@keyframes diamondSparkle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    filter: brightness(1);
+  }
+  25% {
+    transform: translateY(-2px) rotate(5deg);
+    filter: brightness(1.2);
+  }
+  50% {
+    transform: translateY(-1px) rotate(-3deg);
+    filter: brightness(1.1);
+  }
+  75% {
+    transform: translateY(-3px) rotate(8deg);
+    filter: brightness(1.3);
+  }
+}
+
+.diamond-sparkle {
+  animation: diamondSparkle 3s ease-in-out infinite;
+}
+
+/* Enhanced logo text effects */
+.logo-text-glow {
+  text-shadow: 
+    0 0 10px rgba(251, 191, 36, 0.3),
+    0 0 20px rgba(251, 191, 36, 0.2),
+    0 0 30px rgba(251, 191, 36, 0.1);
+}

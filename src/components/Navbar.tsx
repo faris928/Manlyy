@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, Menu, X, Crown } from 'lucide-react';
+import { ShoppingCart, Menu, X, Diamond } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 const Navbar: React.FC = () => {
@@ -30,16 +30,30 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="relative">
-              <Crown className="h-10 w-10 text-yellow-400 group-hover:text-yellow-300 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 drop-shadow-lg filter crown-float" />
-              <div className="absolute inset-0 h-10 w-10 bg-yellow-400/20 rounded-full blur-md group-hover:bg-yellow-300/30 transition-all duration-500 animate-pulse"></div>
+            <div className="relative flex items-center">
+              {/* Decorative Lines */}
+              <div className="hidden md:block w-8 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent group-hover:via-yellow-300 transition-all duration-500 mr-3"></div>
+              
+              {/* Diamond Icon */}
+              <div className="relative">
+                <Diamond className="h-8 w-8 text-yellow-400 group-hover:text-yellow-300 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 drop-shadow-lg filter diamond-sparkle" />
+                <div className="absolute inset-0 h-8 w-8 bg-yellow-400/20 rounded-full blur-md group-hover:bg-yellow-300/30 transition-all duration-500 animate-pulse"></div>
+                {/* Sparkle effects */}
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 animate-ping"></div>
+                <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+              </div>
+              
+              {/* Decorative Lines */}
+              <div className="hidden md:block w-8 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent group-hover:via-yellow-300 transition-all duration-500 ml-3"></div>
             </div>
+            
             <div className="relative">
-              <span className="text-4xl font-cursive font-bold animated-gradient group-hover:scale-105 transition-transform duration-500 logo-text-glow">
-                MANLY
+              <span className="text-3xl font-serif font-bold text-white group-hover:text-yellow-300 transition-all duration-500 logo-text-glow tracking-wider">
+                M<span className="text-yellow-400 group-hover:text-yellow-200 transition-colors duration-500">A</span>NLY
               </span>
-              <div className="absolute inset-0 text-4xl font-cursive font-bold text-yellow-400/10 blur-sm group-hover:text-yellow-300/20 transition-all duration-500">
-                MANLY
+              <div className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 text-3xl font-serif font-bold text-yellow-400/10 blur-sm group-hover:text-yellow-300/20 transition-all duration-500 tracking-wider">
+                M<span className="text-yellow-400/20">A</span>NLY
               </div>
             </div>
           </Link>
