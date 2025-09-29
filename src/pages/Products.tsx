@@ -26,7 +26,7 @@ const Products: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const categories = ['all', 'watches', 'cologne', 'grooming', 'accessories'];
+  const categories = ['all', 'watches', 'pens', 'necklaces', 'bracelets', 'rings', 'accessories'];
   const priceRanges = [
     { label: 'All Prices', value: 'all' },
     { label: 'Under $100', value: '0-100' },

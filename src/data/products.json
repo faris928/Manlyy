@@ -1,18 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Your Product Name",
+    "name": "Classic Gold Watch",
     "category": "watches",
-    "price": 299,
-    "image": "https://your-image-url.com/product1.jpg",
-    "description": "Your product description here"
+    "price": 1299,
+    "image": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "description": "Elegant timepiece crafted with precision and luxury materials for the discerning gentleman."
   },
   {
     "id": 2,
-    "name": "Another Product",
-    "category": "cologne",
-    "price": 89,
-    "image": "https://your-image-url.com/product2.jpg",
-    "description": "Another product description"
+    "name": "Premium Fountain Pen",
+    "category": "pens",
+    "price": 299,
+    "image": "https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "description": "Handcrafted fountain pen with gold-plated nib for the ultimate writing experience."
+  },
+  {
+    "id": 3,
+    "name": "Diamond Chain Necklace",
+    "category": "necklaces",
+    "price": 899,
+    "image": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "description": "Sophisticated chain necklace with premium materials and timeless design."
+  },
+  {
+    "id": 4,
+    "name": "Leather Bracelet",
+    "category": "bracelets",
+    "price": 199,
+    "image": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "description": "Handcrafted leather bracelet with sterling silver accents for everyday luxury."
+  },
+  {
+    "id": 5,
+    "name": "Signet Ring",
+    "category": "rings",
+    "price": 599,
+    "image": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "description": "Classic signet ring in premium gold with customizable engraving options."
+  },
+  {
+    "id": 6,
+    "name": "Executive Pen Set",
+    "category": "pens",
+    "price": 449,
+    "image": "https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "description": "Professional pen set with fountain pen and ballpoint in luxury presentation box."
   }
 ]

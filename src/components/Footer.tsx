@@ -33,8 +33,10 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-yellow-400">Categories</h3>
             <ul className="space-y-2">
               <li><a href="/products?category=watches" className="text-gray-400 hover:text-white transition-colors duration-300">Watches</a></li>
-              <li><a href="/products?category=cologne" className="text-gray-400 hover:text-white transition-colors duration-300">Cologne</a></li>
-              <li><a href="/products?category=grooming" className="text-gray-400 hover:text-white transition-colors duration-300">Grooming</a></li>
+              <li><a href="/products?category=pens" className="text-gray-400 hover:text-white transition-colors duration-300">Pens</a></li>
+              <li><a href="/products?category=necklaces" className="text-gray-400 hover:text-white transition-colors duration-300">Necklaces</a></li>
+              <li><a href="/products?category=bracelets" className="text-gray-400 hover:text-white transition-colors duration-300">Bracelets</a></li>
+              <li><a href="/products?category=rings" className="text-gray-400 hover:text-white transition-colors duration-300">Rings</a></li>
               <li><a href="/products?category=accessories" className="text-gray-400 hover:text-white transition-colors duration-300">Accessories</a></li>
             </ul>
           </div>
