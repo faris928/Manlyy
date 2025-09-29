@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Your Product Name",
+    "category": "watches",
+    "price": 299,
+    "image": "https://your-image-url.com/product1.jpg",
+    "description": "Your product description here"
+  },
+  {
+    "id": 2,
+    "name": "Another Product",
+    "category": "cologne",
+    "price": 89,
+    "image": "https://your-image-url.com/product2.jpg",
+    "description": "Another product description"
+  }
+]
