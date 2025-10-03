@@ -1,0 +1,57 @@
+[
+  {
+    "productId": 1,
+    "reviews": [
+      {
+        "id": 1,
+        "userId": 1,
+        "userName": "James Wilson",
+        "rating": 5,
+        "comment": "Exceptional quality and craftsmanship. This watch exceeded all my expectations.",
+        "date": "2024-01-15",
+        "verified": true
+      },
+      {
+        "id": 2,
+        "userId": 2,
+        "userName": "Michael Chen",
+        "rating": 5,
+        "comment": "Premium materials and attention to detail. Worth every penny.",
+        "date": "2024-01-10",
+        "verified": true
+      },
+      {
+        "id": 3,
+        "userId": 3,
+        "userName": "David Rodriguez",
+        "rating": 4,
+        "comment": "Great product, fast shipping. Very satisfied with my purchase.",
+        "date": "2024-01-08",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "productId": 2,
+    "reviews": [
+      {
+        "id": 4,
+        "userId": 4,
+        "userName": "Robert Johnson",
+        "rating": 5,
+        "comment": "Beautiful fountain pen with smooth writing experience. Highly recommended.",
+        "date": "2024-01-12",
+        "verified": true
+      },
+      {
+        "id": 5,
+        "userId": 5,
+        "userName": "Thomas Anderson",
+        "rating": 5,
+        "comment": "Elegant design and perfect weight. This pen is a work of art.",
+        "date": "2024-01-05",
+        "verified": true
+      }
+    ]
+  }
+]

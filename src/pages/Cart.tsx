@@ -16,15 +16,22 @@ const Cart: React.FC = () => {
 
   if (state.items.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black pt-20 overflow-hidden">
+        {/* Empty Cart Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-32 right-32 w-24 h-24 bg-yellow-400/4 rounded-full animate-cart-empty-float-1"></div>
+          <div className="absolute bottom-40 left-40 w-16 h-16 bg-yellow-300/3 rounded-full animate-cart-empty-float-2"></div>
+          <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-yellow-500/5 rounded-full animate-cart-empty-float-3"></div>
+        </div>
+        
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center py-20">
-            <ShoppingBag className="h-24 w-24 text-gray-600 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold text-white mb-4">Your Cart is Empty</h2>
-            <p className="text-gray-400 mb-8">Discover our premium collection and add some luxury to your life.</p>
+          <div className="text-center py-20 animate-cart-empty-reveal">
+            <ShoppingBag className="h-24 w-24 text-gray-600 mx-auto mb-6 animate-cart-bag-float" />
+            <h2 className="text-3xl font-bold text-white mb-4 animate-cart-empty-title">Your Cart is Empty</h2>
+            <p className="text-gray-400 mb-8 animate-cart-empty-subtitle">Discover our premium collection and add some luxury to your life.</p>
             <Link
               to="/products"
-              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold py-3 px-8 rounded-full hover:from-yellow-300 hover:to-yellow-400 transform hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold py-3 px-8 rounded-full hover:from-yellow-300 hover:to-yellow-400 transform hover:scale-105 transition-all duration-300 animate-cart-empty-button"
             >
               Start Shopping
             </Link>
@@ -35,14 +42,25 @@ const Cart: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-amber-900/10 to-black pt-20 relative">
+    <div className="min-h-screen bg-gradient-to-br from-black via-amber-900/10 to-black pt-20 relative overflow-hidden">
+      {/* Cart Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-24 right-24 w-20 h-20 bg-yellow-400/5 rounded-full animate-cart-float-1"></div>
+        <div className="absolute bottom-32 left-32 w-16 h-16 bg-yellow-300/4 rounded-full animate-cart-float-2"></div>
+        <div className="absolute top-1/2 right-1/3 w-12 h-12 bg-yellow-500/6 rounded-full animate-cart-float-3"></div>
+        
+        {/* Shopping particles */}
+        <div className="absolute top-40 left-20 w-2 h-2 bg-yellow-400 rounded-full animate-cart-particle-1"></div>
+        <div className="absolute bottom-60 right-60 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-cart-particle-2"></div>
+      </div>
+      
       {/* Antique texture overlay */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 animate-cart-texture-shift">
         <div className="w-full h-full bg-gradient-to-br from-amber-800/20 via-transparent to-amber-900/20"></div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-5xl md:text-6xl font-cursive font-bold text-white mb-12 text-center animate-fade-in-down">
-          Shopping <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200 animate-fade-in-up animation-delay-300">Cart</span>
+        <h1 className="text-5xl md:text-6xl font-cursive font-bold text-white mb-12 text-center animate-magical-cart-title">
+          Shopping <span className="text-yellow-400 animate-magical-cart-title animation-delay-300 animate-cart-glow">Cart</span>
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

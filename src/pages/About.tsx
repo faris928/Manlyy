@@ -18,26 +18,39 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-hidden">
       {/* Hero Section with Parallax */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Floating About Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-32 right-24 w-28 h-28 bg-yellow-400/6 rounded-full animate-about-float-1"></div>
+          <div className="absolute bottom-48 left-32 w-20 h-20 bg-yellow-300/4 rounded-full animate-about-float-2"></div>
+          <div className="absolute top-1/3 left-1/3 w-16 h-16 bg-yellow-500/8 rounded-full animate-about-float-3"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-yellow-400/5 rounded-full animate-about-float-4"></div>
+          
+          {/* Heritage particles */}
+          <div className="absolute top-40 left-20 w-2 h-2 bg-yellow-400 rounded-full animate-heritage-particle-1"></div>
+          <div className="absolute top-80 right-40 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-heritage-particle-2"></div>
+          <div className="absolute bottom-60 left-60 w-2.5 h-2.5 bg-yellow-500 rounded-full animate-heritage-particle-3"></div>
+        </div>
+        
         <div
           ref={parallaxRef}
-          className="absolute inset-0 w-full h-[120%]"
+          className="absolute inset-0 w-full h-[120%] animate-about-parallax"
         >
           <img
             src="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Vintage luxury lifestyle"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-about-bg-shift"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-amber-900/30 to-black/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-amber-900/30 to-black/80 animate-about-overlay-pulse"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-cursive font-bold text-white mb-6 leading-tight animate-fade-in-down">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200 animate-fade-in-up animation-delay-500">Story</span>
+          <h1 className="text-6xl md:text-8xl font-cursive font-bold text-white mb-6 leading-tight animate-magical-about-title">
+            Our <span className="text-yellow-400 animate-magical-about-title animation-delay-500 animate-heritage-glow">Story</span>
           </h1>
-          <p className="text-xl md:text-2xl font-cursive text-gray-300 leading-relaxed animate-fade-in animation-delay-700">
+          <p className="text-xl md:text-2xl font-cursive text-gray-300 leading-relaxed animate-magical-about-subtitle animation-delay-700">
             Crafting excellence for the discerning gentleman since 2015
           </p>
         </div>
@@ -53,7 +66,7 @@ const About: React.FC = () => {
               </h2>
               <div className="space-y-6 text-lg font-cursive text-gray-300 leading-relaxed">
                 <p className="animate-fade-in-up animation-delay-500">
-                  Born from a passion for exceptional craftsmanship and timeless design, Manly represents the pinnacle of masculine sophistication. Our journey began with a simple belief: every gentleman deserves access to the finest essentials that reflect his character and ambition.
+                  Born from a passion for exceptional craftsmanship and timeless design, Manly Faridunhill represents the pinnacle of masculine sophistication. Our journey began with a simple belief: every gentleman deserves access to the finest essentials that reflect his character and ambition.
                 </p>
                 <p className="animate-fade-in-up animation-delay-700">
                   We curate each piece with meticulous attention to detail, partnering with master craftsmen and renowned artisans worldwide. From Swiss timepieces to Italian leather goods, every product in our collection tells a story of heritage, quality, and uncompromising excellence.
@@ -102,16 +115,6 @@ const About: React.FC = () => {
 
             <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-400/30 transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up animation-delay-900">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Users className="h-8 w-8 text-black" />
-              </div>
-              <h3 className="text-xl font-cursive font-bold text-white mb-4">Heritage</h3>
-              <p className="text-gray-400 font-cursive leading-relaxed">
-                We honor traditional craftsmanship while embracing modern innovation and contemporary design.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-400/30 transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up animation-delay-1100">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="h-8 w-8 text-black" />
               </div>
               <h3 className="text-xl font-cursive font-bold text-white mb-4">Global</h3>
@@ -120,13 +123,23 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-400/30 transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up animation-delay-1300">
+            <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-400/30 transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up animation-delay-1100">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="h-8 w-8 text-black" />
               </div>
               <h3 className="text-xl font-cursive font-bold text-white mb-4">Trust</h3>
               <p className="text-gray-400 font-cursive leading-relaxed">
                 We build lasting relationships based on authenticity, transparency, and unwavering commitment.
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-400/30 transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up animation-delay-1300">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Users className="h-8 w-8 text-black" />
+              </div>
+              <h3 className="text-xl font-cursive font-bold text-white mb-4">Community</h3>
+              <p className="text-gray-400 font-cursive leading-relaxed">
+                We foster a community of distinguished gentlemen who appreciate the finest things in life.
               </p>
             </div>
           </div>

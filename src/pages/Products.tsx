@@ -79,34 +79,49 @@ const Products: React.FC = () => {
   }, [products, selectedCategory, priceRange, searchTerm, sortBy]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-amber-900/10 to-black pt-20 relative">
+    <div className="min-h-screen bg-gradient-to-br from-black via-amber-900/10 to-black pt-20 relative overflow-hidden">
       {/* Antique texture overlay */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 animate-background-shift">
         <div className="w-full h-full bg-gradient-to-br from-amber-800/20 via-transparent to-amber-900/20"></div>
       </div>
+      
+      {/* Floating Product Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-yellow-400/4 rounded-full animate-product-float-1"></div>
+        <div className="absolute bottom-40 right-32 w-24 h-24 bg-yellow-300/3 rounded-full animate-product-float-2"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-yellow-500/5 rounded-full animate-product-float-3"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-yellow-400/3 rounded-full animate-product-float-4"></div>
+        
+        {/* Shopping particles */}
+        <div className="absolute top-32 right-20 w-2 h-2 bg-yellow-400 rounded-full animate-shopping-particle-1"></div>
+        <div className="absolute top-60 left-40 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-shopping-particle-2"></div>
+        <div className="absolute bottom-48 right-48 w-2.5 h-2.5 bg-yellow-500 rounded-full animate-shopping-particle-3"></div>
+        <div className="absolute bottom-32 left-32 w-1 h-1 bg-yellow-200 rounded-full animate-shopping-particle-4"></div>
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h1 className="text-5xl md:text-7xl font-cursive font-bold text-white mb-4 animate-fade-in-down">
-            Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200 animate-fade-in-up animation-delay-500">Collection</span>
+          <h1 className="text-5xl md:text-7xl font-cursive font-bold text-white mb-4 animate-magical-products-title">
+            Premium <span className="text-yellow-400 animate-magical-products-title animation-delay-500 animate-text-sparkle">Collection</span>
           </h1>
-          <p className="text-xl font-cursive text-gray-400 max-w-2xl mx-auto animate-fade-in animation-delay-700">
+          <p className="text-xl font-cursive text-gray-400 max-w-2xl mx-auto animate-magical-products-subtitle animation-delay-700">
             Discover our curated selection of luxury essentials for the discerning gentleman
           </p>
         </div>
 
         {/* Filters and Search */}
-        <div className={`bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 mb-8 transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div className={`bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 mb-8 transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'} animate-filter-glow`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 animate-search-pulse" />
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 animate-input-shimmer"
               />
             </div>
 

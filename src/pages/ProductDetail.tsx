@@ -256,7 +256,7 @@ const ProductDetail: React.FC = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-400">Brand:</span>
-                    <span className="text-white">Manly Premium</span>
+                    <span className="text-white">Manly Faridunhill</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Category:</span>
@@ -278,7 +278,7 @@ const ProductDetail: React.FC = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">SKU:</span>
-                    <span className="text-white">MNL-{product.id.toString().padStart(4, '0')}</span>
+                    <span className="text-white">MF-{product.id.toString().padStart(4, '0')}</span>
                   </div>
                 </div>
               </div>

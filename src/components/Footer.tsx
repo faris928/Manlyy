@@ -1,5 +1,5 @@
 import React from 'react';
-import { Diamond, Mail, Phone, MapPin } from 'lucide-react';
+import { Crown, Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -11,24 +11,54 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <div className="relative flex items-center">
                 {/* Decorative Lines */}
-                <div className="w-6 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent mr-2"></div>
+                <div className="w-6 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent mr-2 animate-pulse"></div>
                 
-                {/* Diamond Icon */}
+                {/* 3D Crown Icon */}
                 <div className="relative">
-                  <Diamond className="h-8 w-8 text-yellow-400 drop-shadow-lg filter diamond-sparkle" />
-                  <div className="absolute inset-0 h-8 w-8 bg-yellow-400/20 rounded-full blur-md animate-pulse"></div>
+                  <div className="crown-3d-container">
+                    <Crown className="h-10 w-10 text-yellow-600 drop-shadow-2xl filter crown-3d-rotate crown-bounce crown-pulse" />
+                    <Crown className="absolute inset-0 h-10 w-10 text-yellow-400 opacity-70 mix-blend-overlay crown-3d-rotate-reverse" />
+                    <Crown className="absolute inset-0 h-10 w-10 text-yellow-500 crown-wobble opacity-50 mix-blend-multiply" />
+                  </div>
+                  <div className="absolute inset-0 h-10 w-10 bg-yellow-500/40 rounded-full blur-lg animate-pulse crown-glow-rotate crown-glow-expand"></div>
+                  <div className="absolute inset-0 h-10 w-10 bg-yellow-400/30 rounded-full blur-xl animate-pulse animation-delay-500 crown-glow-spiral"></div>
+                  
+                  {/* Footer Sparkles */}
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-300 rounded-full animate-ping animation-delay-1000 sparkle-3d-1 sparkle-orbit-1" style={{ animationDuration: '2s' }}></div>
+                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse animation-delay-1500 sparkle-3d-2 sparkle-dance"></div>
+                  <div className="absolute top-0 -left-1 w-1 h-1 bg-yellow-200 rounded-full animate-ping animation-delay-2000 sparkle-float"></div>
                 </div>
                 
                 {/* Decorative Lines */}
-                <div className="w-6 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent ml-2"></div>
+                <div className="w-6 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent ml-2 animate-pulse animation-delay-300"></div>
               </div>
               
               <div className="relative">
-                <span className="text-2xl font-serif font-bold text-white logo-text-glow tracking-wider">
-                  M<span className="text-yellow-400">A</span>NLY
+                <span className="text-3xl font-serif font-bold text-white logo-text-3d tracking-wider manly-3d-text manly-wave-text">
+                  <span className="inline-block text-yellow-400 manly-letter-bounce animation-delay-100">M</span>
+                  <span className="inline-block text-yellow-400 manly-letter-bounce animation-delay-200">a</span>
+                  <span className="inline-block text-yellow-400 manly-letter-bounce animation-delay-300">n</span>
+                  <span className="inline-block text-yellow-400 manly-letter-bounce animation-delay-400">l</span>
+                  <span className="inline-block text-yellow-400 manly-letter-bounce animation-delay-500">y</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-600"> </span>
+                  <span className="inline-block manly-letter-bounce animation-delay-700">F</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-800">a</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-900">r</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1000">i</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1100">d</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1200">u</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1300">n</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1400">h</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1500">i</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1600">l</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1700">l</span>
+                  <span className="inline-block manly-letter-bounce animation-delay-1700">l</span>
                 </span>
-                <div className="absolute inset-0 text-2xl font-serif font-bold text-yellow-400/10 blur-sm tracking-wider">
-                  M<span className="text-yellow-400/20">A</span>NLY
+                <div className="absolute inset-0 text-3xl font-serif font-bold text-yellow-400/25 blur-sm tracking-wider text-shadow-3d-1 text-shadow-float">
+                  <span className="text-yellow-400/35">Manly</span> Faridunhill
+                </div>
+                <div className="absolute inset-0 text-3xl font-serif font-bold text-yellow-400/20 blur-md tracking-wider text-shadow-3d-2 text-shadow-drift">
+                  <span className="text-yellow-400/30">Manly</span> Faridunhill
                 </div>
               </div>
             </div>
@@ -67,15 +97,11 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-yellow-400" />
-                <span className="text-gray-400 text-sm">info@manly.com</span>
+                <span className="text-gray-400 text-sm">info@manly faridunhill.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-yellow-400" />
                 <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-yellow-400" />
-                <span className="text-gray-400 text-sm">New York, NY</span>
               </div>
             </div>
           </div>
@@ -84,7 +110,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Manly. All rights reserved.
+              © 2025 Manly Faridunhill. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Privacy Policy</a>

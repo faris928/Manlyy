@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShoppingCart, Star, Eye } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 
 interface Product {
